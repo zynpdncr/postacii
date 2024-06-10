@@ -1,0 +1,78 @@
+[gd_scene load_steps=15 format=3 uid="uid://bppimyqm0sbcd"]
+
+[ext_resource type="Texture2D" path="res://shopp.png" id="1_vdo6p"]
+[ext_resource type="Theme" uid="uid://c35kx1lkad2vu" path="res://default 2.tres" id="2_6u5o6"]
+[ext_resource type="Texture2D" path="res://ayakkabı.png" id="3_g5fyh"]
+[ext_resource type="Texture2D" path="res://th__3_-removebg-preview (1).png" id="4_ghnlu"]
+[ext_resource type="Texture2D" path="res://Grass-Buttons-arrow2.png" id="6_aedg2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_31pxo"]
+texture = ExtResource("3_g5fyh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_21eb5"]
+texture = ExtResource("3_g5fyh")
+region_rect = Rect2(-65.1924, -50.0025, 622.79, 634.183)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_agqve"]
+texture = ExtResource("3_g5fyh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0mc13"]
+texture = ExtResource("4_ghnlu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ssnf0"]
+texture = ExtResource("4_ghnlu")
+region_rect = Rect2(-72.7875, -50.0025, 634.183, 626.587)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lq6ij"]
+texture = ExtResource("4_ghnlu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2esxk"]
+texture = ExtResource("6_aedg2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jlr3r"]
+texture = ExtResource("6_aedg2")
+region_rect = Rect2(-19.6978, -19.5249, 115.797, 126.445)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jsiba"]
+texture = ExtResource("6_aedg2")
+
+[node name="SHOP" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 456.0
+offset_top = 65.0
+offset_right = 1609.0
+offset_bottom = 1051.0
+texture = ExtResource("1_vdo6p")
+
+[node name="shoes" type="Button" parent="."]
+offset_left = 938.0
+offset_top = 452.0
+offset_right = 1101.0
+offset_bottom = 619.0
+theme = ExtResource("2_6u5o6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_31pxo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_21eb5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_agqve")
+
+[node name="time" type="Button" parent="."]
+offset_left = 675.0
+offset_top = 439.0
+offset_right = 858.0
+offset_bottom = 625.0
+theme = ExtResource("2_6u5o6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0mc13")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ssnf0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lq6ij")
+
+[node name="button" type="Button" parent="."]
+offset_left = 1356.0
+offset_top = 199.0
+offset_right = 1442.0
+offset_bottom = 288.0
+theme = ExtResource("2_6u5o6")
+theme_override_styles/normal = SubResource("StyleBoxTexture_2esxk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jlr3r")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jsiba")
+
+[connection signal="pressed" from="button" to="." method="_on_button_pressed"]

@@ -1,0 +1,228 @@
+[gd_scene load_steps=26 format=3 uid="uid://ddg3cjv185twm"]
+
+[ext_resource type="Texture2D" path="res://Clouds_white/Shape2/cloud_shape2_4.png" id="1_1sgsq"]
+[ext_resource type="Texture2D" path="res://Clouds_white/Shape2/cloud_shape2_1.png" id="1_md4bg"]
+[ext_resource type="Script" path="res://parallax_background.MENUSCENEtscn.gd" id="1_nn7y3"]
+[ext_resource type="Texture2D" path="res://kik-removebg-preview.png" id="1_vk4c2"]
+[ext_resource type="Texture2D" path="res://Clouds_white/Shape2/cloud_shape2_2.png" id="2_56j1i"]
+[ext_resource type="Texture2D" path="res://istockphoto-1061786490-612x612.jpg" id="2_vcrgf"]
+[ext_resource type="Texture2D" path="res://pigeon-animation-bird-motion-wings-in-heaven-vector-42325652-removebg-preview.png" id="3_jjcyr"]
+[ext_resource type="Texture2D" path="res://PİGEON/2.png" id="4_h4g6n"]
+[ext_resource type="Texture2D" path="res://PİGEON/3.png" id="5_b63c3"]
+[ext_resource type="Texture2D" path="res://PİGEON/4.png" id="6_kyaqq"]
+[ext_resource type="Texture2D" path="res://PİGEON/5.png" id="7_2pyln"]
+[ext_resource type="Texture2D" path="res://text-1717928565223.png" id="8_1bvjo"]
+[ext_resource type="Texture2D" path="res://PİGEON/6.png" id="8_v0tdh"]
+[ext_resource type="Texture2D" path="res://PİGEON/7.png" id="9_yq6iv"]
+[ext_resource type="Texture2D" path="res://PİGEON/9.png" id="10_rfmnb"]
+[ext_resource type="Texture2D" path="res://PİGEON/8.png" id="11_cgt8p"]
+[ext_resource type="Texture2D" path="res://PİGEON/10.png" id="12_pebja"]
+[ext_resource type="Texture2D" path="res://PİGEON/11.png" id="13_jv6n4"]
+[ext_resource type="Texture2D" path="res://PİGEON/13.png" id="14_buvpa"]
+[ext_resource type="Texture2D" path="res://PİGEON/12.png" id="15_j8h1l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nr8ty"]
+atlas = ExtResource("3_jjcyr")
+region = Rect2(21, 0, 112, 102)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v2yu2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nr8ty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h4g6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_b63c3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kyaqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2pyln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_v0tdh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_yq6iv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rfmnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cgt8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_pebja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jv6n4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_buvpa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_j8h1l")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_khw8e"]
+resource_name = "Idle"
+length = 1.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+}
+
+[sub_resource type="Animation" id="Animation_ddhtt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6155c"]
+_data = {
+"Idle": SubResource("Animation_khw8e"),
+"RESET": SubResource("Animation_ddhtt")
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+script = ExtResource("1_nn7y3")
+
+[node name="Istockphoto-1061786490-612x612" type="Sprite2D" parent="."]
+position = Vector2(1083, 667)
+scale = Vector2(3.54248, 3.26961)
+texture = ExtResource("2_vcrgf")
+metadata/_edit_lock_ = true
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1410, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxLayer2"]
+position = Vector2(378, 357)
+scale = Vector2(1.27845, 1.29587)
+sprite_frames = SubResource("SpriteFrames_v2yu2")
+animation = &"Idle"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxLayer2/AnimatedSprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_6155c")
+}
+autoplay = "Idle"
+
+[node name="CloudShape42" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1059, 293)
+scale = Vector2(2.20783, 3.2257)
+texture = ExtResource("1_1sgsq")
+
+[node name="CloudShape11" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(165, 296)
+scale = Vector2(1.18203, 1.71932)
+texture = ExtResource("1_md4bg")
+
+[node name="CloudShape14" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(338, 71)
+scale = Vector2(1.69697, 1.79032)
+texture = ExtResource("1_md4bg")
+
+[node name="CloudShape15" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(796, 172)
+scale = Vector2(1.23956, 1.81855)
+texture = ExtResource("1_md4bg")
+
+[node name="CloudShape16" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1153, 69)
+scale = Vector2(1.50612, 1.64516)
+texture = ExtResource("1_md4bg")
+
+[node name="CloudShape41" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(479.756, 217)
+scale = Vector2(1.03158, 1)
+texture = ExtResource("2_56j1i")
+
+[node name="CloudShape24" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(497, 400)
+scale = Vector2(1.1699, 1.61111)
+texture = ExtResource("1_1sgsq")
+
+[node name="CloudShape26" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1023, 411)
+texture = ExtResource("1_1sgsq")
+
+[node name="CloudShape27" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1478, 415)
+scale = Vector2(1.36408, 1.5)
+texture = ExtResource("1_1sgsq")
+
+[node name="CloudShape25" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1291.76, 181)
+texture = ExtResource("1_1sgsq")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+metadata/_edit_lock_ = true
+
+[node name="Kik-removebg-preview" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(507, 674)
+scale = Vector2(2.01867, 1.704)
+texture = ExtResource("1_vk4c2")
+flip_h = true
+
+[node name="Kik-removebg-preview2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1516, 675.5)
+scale = Vector2(2.01867, 1.702)
+texture = ExtResource("1_vk4c2")
+
+[node name="Text-1717928565223" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1057, 263)
+scale = Vector2(1.66633, 1.48288)
+texture = ExtResource("8_1bvjo")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5mioaj5elok"]
+
+[ext_resource type="Script" path="res://post.gd" id="1_xcv33"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_xcv33")
